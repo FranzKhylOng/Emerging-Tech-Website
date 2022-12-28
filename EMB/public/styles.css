@@ -1,0 +1,396 @@
+@font-face {
+  font-family: Secular; 
+  src: url(fonts/SecularOne-Regular.ttf);
+}
+
+
+body{
+  font-family: Secular;
+  font-style: normal;
+  width: 85%; /*if the browser gets too small, this makes sure there is still space*/
+  margin: 0 auto;
+}
+
+/*------------Navbar-------------*/
+.navbar-nav a{
+  font-size: 30px;
+  color: #1E6C38;
+  transition: all 0.3s ease 0s;
+}
+
+.navbar-nav a:hover{
+  transform: translateY(-3px);
+  color: #2AC35E;
+}
+
+.current{
+  text-decoration-line: underline;  
+  text-decoration-thickness: 5px;
+}
+
+/*------------Greetings Card-------------*/
+.greetings{
+  position: relative;
+  background: #2FA156;
+  box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding-left: 26px;
+  padding-top: 18px;
+  margin-top: 51px;
+  transition: all 0.3s ease 0s;
+  animation: pop 0.3s linear 1;
+  padding-bottom: 18px;
+}
+.greetings h1{
+  font-weight: 400;
+  font-size: 50px;
+  color: #fff;
+  line-height: 73px;
+  margin: 0px;
+}
+
+.greetings p{
+  font-weight: 400;
+  font-size: 25px;
+  color: #fff;
+  line-height: 36px;
+  margin-bottom: 0px;
+}
+
+.greetings:hover, .gcont:hover{
+  transform: translateY(-10px);
+}
+
+
+/*------------Date-------------*/
+.date-card{
+  padding-top: 50px;
+  color: #2AC35E;
+  font-size: 25px;
+}
+
+.date-card h1{
+  color: #1E6C39;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.shroom{
+  position: relative;
+  top: -160px;
+  left: 130px;
+}
+
+.firstrow{
+  height: 250px;
+  margin-bottom: 30px;
+}
+
+.time{
+  width: 150px;
+}
+
+/*------------Gauges-------------*/
+
+.humidity, .temperature, .water{
+  font-size: 25px;
+  width: 400px;
+  height: 249px;
+  color: #fff;
+  background: #6FE096;
+  box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding-left: 35px;
+  padding-right: 13px;
+  padding-top: 15px;
+}
+
+.humidity, .temperature{
+  margin-right: 15px;
+}
+
+.gaugerow{
+  margin-top: 50px;
+  margin-left: 5px;
+}
+.gauges h3{
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.hcont, .tcont, .wcont{
+  display: inline-flex;
+}
+
+#hlogo{
+  position: relative;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+#tlogo{
+  position: relative;
+  margin-top: 15px;
+  margin-left: 45px;
+}
+
+#wlogo{
+  position: relative;
+  margin-top: 20px;
+  margin-left: 60px;
+  margin-bottom: 50px;
+}
+.gauges :hover{
+  color: #1E6C38;
+  transition: 0.5s;
+}
+
+.gauge-container {
+  width: 170px;
+  height: 170px;
+  display: block;
+  float: left;
+  padding: 10px;
+  border-radius: 12px;
+  position: relative;
+}
+.gauge-container > .label {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  color: rgb(47, 227, 255);;
+  font-family: monospace;
+  font-size: 0.8em;
+  padding: 5px 10px;
+  border-top-right-radius: 12px;
+}
+.gauge-container > .gauge .dial {
+  stroke: #ffffff;
+  stroke-width: 13;
+  fill: rgba(0,0,0,0);
+}
+.gauge-container > .gauge .value {
+  stroke: #E3A862;
+  stroke-width: 13;
+  fill: rgba(0,0,0,0);
+}
+.gauge-container > .gauge .value-text {
+  fill: #1E6C38;
+  font-family: Secular;
+  font-weight: bold;
+  font-size: 30px
+}
+.gcont{
+  transition: all 0.3s ease 0s;
+}
+
+
+/*.hcont img, .tcont img, .wcont img{
+  place-self: center;
+}*/
+
+.graph{
+  margin-top: 53px;
+  max-width: 1200px;
+  height: 470px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.25);
+  position: relative;
+  margin-left: 20px;
+}
+
+#chart-temperature{
+  width: 100%;
+}
+
+#chart-water{
+  height: 265px;
+  place-self: center;
+}
+
+
+/* Responsiveness */
+@media only screen and (max-width: 600px) {
+  .greetings{
+    text-align: center;
+    padding-right: 25px;
+  }
+
+  .greetings h1{
+    padding-top: 14px;
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .greetings p{
+    padding-top: 5px;
+    line-height: 25px;
+    font-size: 18px;
+  }
+
+
+  /**/
+  #hlogo, #tlogo, #wlogo{
+    width: 100px;
+    height: 100px;
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+}
+
+  @media only screen and (max-width: 1600px){
+  .gcont{
+    margin-bottom: 35px;
+  }
+}
+
+.dcontainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+} 
+.dash {
+  margin: 0 15px;
+  width: 35px;
+  height: 15px;
+  border-radius: 8px;
+  background: #6610f2;
+  box-shadow: 0 0 10px 0 #ba9cea;
+}
+
+.uno {
+  margin-right: -18px;
+  transform-origin: center left;
+  animation: spin 3s linear infinite;  
+}
+
+.dos {
+  transform-origin: center right;
+  animation: spin2 3s linear infinite;
+  animation-delay: .2s;
+}
+
+.tres {
+  transform-origin: center right;
+  animation: spin3 3s linear infinite;
+  animation-delay: .3s;
+}
+
+.cuatro {
+  transform-origin: center right;
+  animation: spin4 3s linear infinite;
+  animation-delay: .4s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  30% {
+    transform: rotate(370deg);
+  }
+  35% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-180deg);
+  }
+  35% {
+    transform: rotate(-190deg);
+  }
+  40% {
+    transform: rotate(-180deg);
+  }
+  78% {
+    transform: rotate(-180deg);
+  }
+  95% {
+    transform: rotate(-360deg);
+  }
+  98% {
+    transform: rotate(-370deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  27% {
+    transform: rotate(0deg);  
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  45% {
+    transform: rotate(190deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  62% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  80% {
+    transform: rotate(370deg);
+  }
+  85% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin4 {
+  0% {
+    transform: rotate(0deg);
+  }
+  38% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(-360deg);
+  }
+  65% {
+    transform: rotate(-370deg);
+  }
+  75% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Responsiveness 
+
+@media screen and (min-width:750px){
+  .gauges{
+    display: inline-flex;
+  }
+} */
