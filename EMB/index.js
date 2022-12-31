@@ -21,7 +21,7 @@ let io = require('socket.io')(server);
 //Send index.html page on GET /
 app.use(express.static('public')); 
 
-
+/*
 //connect serial communication to arduino
 const { SerialPort } = require('serialport'); 
 const { ReadlineParser } = require('@serialport/parser-readline');
@@ -34,9 +34,10 @@ const parser = port.pipe(new ReadlineParser({
     delimiter: '\n'
 }))
 
+*/
 //Event listener for Arduino
 
-
+/*
 parser.on('data', async (temp) => {
 
     await Data_reader();
@@ -112,7 +113,7 @@ parser.on('data', async (temp) => {
         Data_writer(jsonData);
     }
 });
-
+*/
 
 io.on('connection', async (socket) => {
     console.log(`Someone connected. ID: ${socket.id}`);
