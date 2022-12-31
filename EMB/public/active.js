@@ -6,3 +6,6 @@ const navLinks = document.querySelectorAll('nav a').forEach(link =>{
 })
 
 
+function init(){
+    dragula([document.querySelector("#dragparent")]);
+}
