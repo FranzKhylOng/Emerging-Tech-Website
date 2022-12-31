@@ -80,8 +80,8 @@ body{
 
 .shroom{
   position: relative;
-  top: -160px;
-  left: 130px;
+  top: -180px;
+  left: 140px;
 }
 
 .firstrow{
@@ -285,10 +285,10 @@ body{
   }
 
   .shroom{
-    width: 209px;
-    height: 243px;
-    top: -140px;
-    left: 120px;
+    width: 199px;
+    height: 223px;
+    top: -160px;
+    left: 150px;
   }  
 }
 
@@ -330,12 +330,7 @@ body{
     height: 110px;
   }
 
-  .shroom{
-    width: 189px;
-    height: 223px;
-    top: -120px;
-    left: 110px;
-  }  
+
 
 }
 
@@ -354,11 +349,15 @@ body{
     font-size: 40px;
   }
 
+  .row{
+    margin-top: 0px;
+  }
+
   .shroom{
-    width: 169px;
-    height: 203px;
-    top: -120px;
-    left: 110px;
+    width: 179px;
+    height: 193px;
+    top: -150px;
+    left: 120px;
   }  
 
   .greetings h1{
@@ -431,6 +430,10 @@ body{
   .gcont h3{
     font-size: 25px;
   }
+
+  .row{
+    margin-top: 50px;
+  } 
 
   .date-card{
     padding-top: 50px;
