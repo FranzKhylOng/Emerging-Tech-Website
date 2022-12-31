@@ -21,7 +21,7 @@ let io = require('socket.io')(server);
 //Send index.html page on GET /
 app.use(express.static('public')); 
 
-/*
+
 //connect serial communication to arduino
 const { SerialPort } = require('serialport'); 
 const { ReadlineParser } = require('@serialport/parser-readline');
@@ -34,10 +34,10 @@ const parser = port.pipe(new ReadlineParser({
     delimiter: '\n'
 }))
 
-*/
+
 //Event listener for Arduino
 
-/*
+
 parser.on('data', async (temp) => {
 
     await Data_reader();
@@ -46,7 +46,7 @@ parser.on('data', async (temp) => {
     let diff = Math.abs(date1st - datenow);
     let days = Math.floor(diff / (1000 * 3600 * 24));
 
-    if(days >= 10) {
+    if(days >= 30) {
        Data_shift();
        io.sockets.emit('Forecast', [jsonData, 'Temperature']);   
        io.sockets.emit('Forecast', [jsonData, 'Humidity']);
@@ -113,7 +113,7 @@ parser.on('data', async (temp) => {
         Data_writer(jsonData);
     }
 });
-*/
+
 
 io.on('connection', async (socket) => {
     console.log(`Someone connected. ID: ${socket.id}`);
