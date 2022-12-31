@@ -4,8 +4,3 @@ const navLinks = document.querySelectorAll('nav a').forEach(link =>{
         link.classList.add('current');
     }
 })
-
-
-function init(){
-    dragula([document.querySelector("#dragparent")]);
-}
