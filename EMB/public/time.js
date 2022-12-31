@@ -29,23 +29,23 @@ function formatDate(date) {
     "Sat"
   ];
   const MONTHS = [
-    "Jan",
-    "Feb",
+    "Jan.",
+    "Feb.",
     "March",
     "April",
     "May",
     "June",
     "July",
-    "Aug",
-    "Sept",
-    "Oct",
-    "Nov",
-    "Dec"
+    "Aug.",
+    "Sept.",
+    "Oct.",
+    "Nov.",
+    "Dec."
   ];
 
   return `${DAYS[date.getDay()]}, ${
     MONTHS[date.getMonth()]
-  } ${date.getDate()} ${date.getFullYear()}`;
+  } ${date.getDate()}, ${date.getFullYear()}`;
 }
 
 setInterval(() => {

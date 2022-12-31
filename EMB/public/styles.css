@@ -1,14 +1,16 @@
 @font-face {
-  font-family: Secular; 
-  src: url(fonts/SecularOne-Regular.ttf);
+  font-family: 'Montserrat', sans-serif;
+  src: url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 }
 
 
 body{
-  font-family: Secular;
+  font-family: 'Montserrat';
   font-style: normal;
   width: 85%; /*if the browser gets too small, this makes sure there is still space*/
   margin: 0 auto;
+  padding-bottom: 50px;
+  font-weight: bold;
 }
 
 /*------------Navbar-------------*/
@@ -42,7 +44,7 @@ body{
   padding-bottom: 18px;
 }
 .greetings h1{
-  font-weight: 400;
+  font-weight: 600;
   font-size: 50px;
   color: #fff;
   line-height: 73px;
@@ -73,6 +75,7 @@ body{
   color: #1E6C39;
   font-size: 50px;
   line-height: 50px;
+  font-weight: 600;
 }
 
 .shroom{
@@ -114,7 +117,7 @@ body{
   margin-left: 5px;
 }
 .gauges h3{
-  font-weight: normal;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
@@ -131,13 +134,13 @@ body{
 #tlogo{
   position: relative;
   margin-top: 15px;
-  margin-left: 45px;
+  margin-left: 35px;
 }
 
 #wlogo{
   position: relative;
   margin-top: 20px;
-  margin-left: 60px;
+  margin-left: 40px;
   margin-bottom: 50px;
 }
 .gauges :hover{
@@ -177,7 +180,6 @@ body{
 }
 .gauge-container > .gauge .value-text {
   fill: #1E6C38;
-  font-family: Secular;
   font-weight: bold;
   font-size: 30px
 }
@@ -212,6 +214,9 @@ body{
 
 /* Responsiveness */
 @media only screen and (max-width: 600px) {
+  .firstrow{
+    width: 100%; /*Makes girl logo and clock go to a new row at 1000 pixels*/
+  }
   .greetings{
     text-align: center;
     padding-right: 25px;
@@ -229,20 +234,328 @@ body{
     font-size: 18px;
   }
 
+  #tlogo{
+    margin-left: 35px;
+  }
+  #hlogo{
+    margin-left: 25px;
+  }
 
+  #wlogo{
+    margin-left: 25px;
+  }
   /**/
   #hlogo, #tlogo, #wlogo{
-    width: 100px;
-    height: 100px;
-    margin-left: 0px;
+    width: 130px;
+    height: 130px;
     margin-top: 30px;
   }
+
 }
 
   @media only screen and (max-width: 1600px){
   .gcont{
     margin-bottom: 35px;
+    width: 375px;
+    height: 225px;     /*eeeeeeeeeeeeeeeeeeeeeee*/
   }
+
+  .gauge-container{
+    width: 150px;
+    height: 150px;
+  }
+
+  #hlogo, #tlogo{
+    width: 90px;
+    height: 90px;
+    margin-top: 20px;
+  }
+  #wlogo{
+    margin-top: 20px;
+    width: 65px;
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 1420px){
+  .gcont{
+    margin-bottom: 35px;
+    width: 350px;
+    height: 220px;     /*eeeeeeeeeeeeeeeeeeeeeee*/
+  }
+
+  .shroom{
+    width: 209px;
+    height: 243px;
+    top: -140px;
+    left: 120px;
+  }  
+}
+
+
+@media only screen and (max-width: 1350px){
+  .greetings{
+    padding-right: 15px;
+  }
+  .gcont{
+    margin-bottom: 35px;
+    width: 330px;
+    height: 200px;     /*eeeeeeeeeeeeeeeeeeeeeee*/
+  }
+
+  .gauge-container{
+    width: 130px;
+    height: 130px;
+  }
+
+}
+
+@media only screen and (max-width: 1255px) {
+  .girl{
+    width: 274px;
+    height: 180px;
+    top: -100px;
+    left: 75px;
+  }  
+
+  .gcont{
+    margin-bottom: 35px;
+    padding-left: 15px;
+    width: 310px;
+    height: 200px;     /*eeeeeeeeeeeeeeeeeeeeeee*/
+  }
+
+  .gauge-container{
+    width: 110px;
+    height: 110px;
+  }
+
+  .shroom{
+    width: 189px;
+    height: 223px;
+    top: -120px;
+    left: 110px;
+  }  
+
+}
+
+@media only screen and (max-width: 1255px) {
+  .gcont{
+    width: 290px;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  .date{
+    font-size: 22px;
+  }
+
+  .date-card h1{
+    font-size: 40px;
+  }
+
+  .shroom{
+    width: 169px;
+    height: 203px;
+    top: -120px;
+    left: 110px;
+  }  
+
+  .greetings h1{
+    font-size: 30px;
+  }
+  
+  .greetings{
+    padding-top: 0px;
+  }
+
+  .greetings p{
+    font-size: 20px;
+  }
+  .gcont{
+    width: 270px;
+    height: 160px;
+    padding-left: 10px;
+  }
+
+  .gcont h3{
+    font-size: 20px;
+  }
+
+  #hlogo, #tlogo{
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  #wlogo{
+    margin-top: 15px;
+    width: 50px;
+    height: 70px;
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  .gcont{
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+    .gcont{
+      width: 220px;
+    }
+    .gauge-container{
+      width: 90px;
+      height: 90px;
+    }
+
+    .date{
+      font-size: 20px;
+    }
+
+    .date-card h1{
+      font-size: 38px;
+    }
+}
+
+@media only screen and (max-width: 870px) { /*go back to bigger sizing*/
+  .gcont{
+    width: 400px;
+    height: 249px;
+    font-size: 25px;
+    padding-left: 20px;
+  }
+
+  .gcont h3{
+    font-size: 25px;
+  }
+
+  .date-card{
+    padding-top: 50px;
+    font-size: 25px;
+    margin-left: 30px;
+  }
+  
+  .date-card h1{
+    font-size: 50px;
+  }
+
+  .date{
+    font-size: 25px;
+  }
+  .shroom{
+    width: 229px;
+    height: 263px;
+    top: -160px;
+    left: 130px
+  }
+
+  .gauge-container {
+    width: 170px;
+    height: 170px;
+  }
+
+  .firstrow{
+    width: 100%; 
+  }
+
+  #tlogo{
+    margin-left: 35px;
+  }
+  #hlogo{
+    margin-left: 25px;
+  }
+
+  #wlogo{
+    margin-left: 55px;
+  }
+  /**/
+  #hlogo, #tlogo{
+    width: 130px;
+    height: 130px;
+    margin-top: 30px;
+  }
+
+  #wlogo{
+    width: 80px;
+    height: 110px;
+    margin-top: 30px;
+  }
+
+}
+
+
+@media only screen and (max-width: 498px) {
+
+  .girl{
+    width: 200px;
+    height: 150px;
+    top: -100px;
+    left: 70px;
+  }  
+
+  .date-card{
+    margin-left: 15px;
+  }
+
+  .date-card h1{
+    font-size: 40px;
+  }
+
+  .date{
+    font-size: 22px;
+  }
+
+  .shroom{
+    width: 209px;
+    height: 243px;
+    top: -160px;
+    left: 110px
+  }
+
+  #hlogo, #tlogo{
+    width: 100px;
+    height: 100px;
+  }
+
+  #wlogo{
+    width: 73px;
+    height: 100px;
+    margin-left: 25px;
+  }
+
+  .wcont, .hcont, .tcont {
+    width: 130px;
+    height: 130px;
+  }
+
+  .gauge-container{
+    width: 130px;
+    height: 130px;
+  }
+  #tlogo{
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  #wlogo{
+    margin-top: 15px;
+  }
+  
+  #hlogo{
+    margin-left: 15px;
+  }
+  .gcont{
+    height: 200px;
+    width: 300px;
+  }
+
+  .greetings{
+    padding-left: 15px;
+  }
+
 }
 
 .dcontainer {
