@@ -60,6 +60,7 @@ parser.on('data', async (temp) => {
     let obj = JSON.parse(temp);
     let passTemp = obj["Temperature"];
     let passHum = obj["Humidity"];
+    let passWat = obj["Water"];
 
     console.log(obj);
     
@@ -71,7 +72,7 @@ parser.on('data', async (temp) => {
         let minute = today.getMinutes(); 
         let seconds = today.getSeconds();
         let passDate = year + "/" + month + "/" + day;
-        let passTime = hours+":"+minute+":"+seconds;
+        let passTime = hours+":z"+minute+":"+seconds;
         let dt = year+"-"+month+"-"+day+" "+hours+":"+minute;
         
     let min = today.getMinutes();
@@ -79,6 +80,7 @@ parser.on('data', async (temp) => {
 
     io.sockets.emit('temp-update', passTemp);
     io.sockets.emit('hum-update', passHum);
+    io.sockets.emit('wat-update', passWat);
     console.log(`Seconds: ${seconds} JSON Length: ${jsonData.Temperature.X.date.length} Days: ${days}`);
 
 
